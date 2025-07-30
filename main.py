@@ -8,7 +8,11 @@ from telegram.ext import Updater, CommandHandler, CallbackContext, CallbackQuery
 from keep_alive import keep_alive
 from ttr_reminder import ttr_reminder_loop
 from ttr_reminder import run_ttr_check_once  # Pastikan fungsi ini sudah ada di ttr_reminder.py
+from google.oauth2.service_account import Credentials
 
+creds_json = os.getenv("GOOGLE_CREDS_JSON")
+creds_dict = json.loads(creds_json)
+creds = Credentials.from_service_account_info(creds_dict)
 TOKEN = "8137142032:AAHUeww0B9I4GGrGTFO64GdVNbgQYBXsZUo"
 bot = Bot(TOKEN)
 
