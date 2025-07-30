@@ -13,7 +13,7 @@ from google.oauth2 import service_account
 creds_json = os.getenv("GOOGLE_CREDS_JSON")
 creds_dict = json.loads(creds_json)
 creds = service_account.Credentials.from_service_account_info(creds_dict)
-TOKEN = "8137142032:AAHUeww0B9I4GGrGTFO64GdVNbgQYBXsZUo"
+TOKEN = "TOKEN_BOT"
 bot = Bot(TOKEN)
 
 GROUP_MAP = {
